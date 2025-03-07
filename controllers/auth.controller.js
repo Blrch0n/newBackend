@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { JWT_EXPIRES_IN } from "../config/env";
+import { JWT_SECRET, JWT_EXPIRES_IN } from "../config/env.js";
 
 export const signUp = async (req, res, next) => {
   const session = await mongoose.startSession();
@@ -47,5 +47,5 @@ export const signUp = async (req, res, next) => {
     next(error);
   }
 };
-// export const signIn = async (req, res, next) => {};
-// export const signOut = async (req, res, next) => {};
+export const signIn = async (req, res, next) => {};
+export const signOut = async (req, res, next) => {};
