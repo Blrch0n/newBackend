@@ -10,7 +10,6 @@ if (!DB_URL) {
 const connectToDataBase = async () => {
   try {
     await mongoose.connect(DB_URL);
-
     console.log(`Connected to the database in ${NODE_ENV} mode`);
   } catch (error) {
     console.log("Error connecting to the database", error);
